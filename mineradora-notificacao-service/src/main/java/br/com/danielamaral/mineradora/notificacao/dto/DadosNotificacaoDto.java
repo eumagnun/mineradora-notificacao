@@ -1,5 +1,6 @@
-package br.com.danielamaral.mineradora.notificacao.model;
+package br.com.danielamaral.mineradora.notificacao.dto;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DadosNotificacao {
+@ApiModel(value = "DadosNotificacao")
+public class DadosNotificacaoDto {
 
 	private String emailRemetente;
 	private String nomeDestinatario;

@@ -7,7 +7,7 @@ import org.apache.commons.mail.SimpleEmail;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import br.com.danielamaral.mineradora.notificacao.model.DadosNotificacao;
+import br.com.danielamaral.mineradora.notificacao.dto.DadosNotificacaoDto;
 
 
 @Service
@@ -21,7 +21,7 @@ public class NotificacaoEmail implements Notificacao{
 	private String passEmail;
 
 	@Override
-	public void enviar(DadosNotificacao dadosNotificacao) {
+	public void enviar(DadosNotificacaoDto dadosNotificacao) {
 		 try {
              Email email = new SimpleEmail();
              email.setHostName("smtp.googlemail.com");
